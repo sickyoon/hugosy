@@ -1,0 +1,49 @@
+{{ partial "header.html" . }}
+<body>
+    {{ partial "sidebar.html" . }}
+
+    <div class="main container-fluid">
+        <div class="row">
+
+            <!-- banner image -->
+            <div class="banner">
+            </div>
+
+            <!-- table of contents -->
+            {{ if .TableOfContents }}
+            <div class="tableofcontents">
+                {{ .TableOfContents }}
+            </div>
+            {{ end }}
+
+            <section class="post">
+
+                <h1 class="post-title">
+                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                </h1>
+                <h3 class="post-subtitle">
+                    {{ .Params.subtitle }}
+                </h3>
+                <span class="post-date">{{ .Date.Format "Jan 2, 2006" }}</span>
+                <span class="post-author">
+                    {{ .Params.author }}
+                </span>
+
+                <!-- TODO: categories -->
+                <!-- TODO: tags -->
+
+                {{ .Content }}
+
+                <!-- TODO: pagination -->
+
+            </section>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
+

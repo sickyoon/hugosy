@@ -1,0 +1,46 @@
+<nav class="sidebar navbar navbar-default">
+    <div class="sidebar-container container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar-collapse" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="sidebar-title-mobile visible-xs">
+                <h4>syoon.io</h4>
+            </div>
+        </div>
+
+        <div class="sidebar-title hidden-xs">
+            <img class="circular" src="https://avatars0.githubusercontent.com/u/24367477" alt="avatar">
+            <h1>
+                <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+            </h1>
+            <p class="lead">
+            gopher &amp; <br>
+            software engineer
+            </p>
+        </div>
+
+        <div class="sidebar-nav collapse navbar-collapse" id="main-navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="/">
+                        <i class="fa fa-fw fa-pencil-square-o"></i>
+                        Blog
+                    </a>
+                </li>
+                {{ range .Site.Menus.main }}
+                <li>
+                    <a href="{{ .URL }}">
+                        {{ .Pre }}
+                        {{ .Name }}
+                    </a>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+    </div>
+</nav>
+

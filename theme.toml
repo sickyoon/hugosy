@@ -1,0 +1,12 @@
+name = "Hugosy"
+description = "Clean two-column template based on bootstrap"
+license = "MIT"
+licenselink = "https://github.com/sickyoon/hugosy/blob/master/LICENSE"
+source_repo = "https://github.com/sickyoon/hugosy"
+tags = ["hugo", "blog", "bootstrap", "hugosy"]
+features = ["blog", "bootstrap"]
+min_version = 0.10
+
+[author]
+    name = "Sick Yoon"
+    homepage = "http://sickyoon.com"
